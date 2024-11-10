@@ -1,0 +1,12 @@
+torch
+transformers
+spacy
+rouge_score
+ipdb
+networkx
+numerizer
+tqdm
+evaluate
+jsonlines
+protobuf
+sacremoses
