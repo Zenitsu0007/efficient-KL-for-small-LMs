@@ -164,5 +164,3 @@ class OrigGenerator:
             raise NotImplementedError
 
         return out
-
-

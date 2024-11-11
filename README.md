@@ -35,8 +35,8 @@ When generating conditional, process one chunk of shards at a time by modifying 
 
 Example:
 
-- Instance 1: --shard_start 0 --shard_size 5000
-- Instance 2: --shard_start 5000 --shard_size 5000
-- Instance 3: --shard_start 10000 --shard_size 5000
+- Instance 1: --shard_start 0 --shard_size 1500
+- Instance 2: --shard_start 1500 --shard_size 1500
+- Instance 3: --shard_start 3000 --shard_size 1500
 
 Set the `--part_idx` argument to the index of the chunk (0 to 5).

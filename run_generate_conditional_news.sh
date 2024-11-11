@@ -22,4 +22,4 @@ conda activate impossible-distillation
 nvidia-smi
 
 # Specify the script you want to run
-python generate_conditional.py --part_idx 0 --con_stage 0 --con_domain news --con_model_name gpt2-xl --device_id 0 --shard_size 1000 --shard_start 0 --save_size 10
+python generate_conditional.py --part_idx 0 --con_stage 0 --con_domain news --con_model_name gpt2-xl --device_id 0 --shard_size 1500 --shard_start 0 --save_size 10

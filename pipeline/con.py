@@ -168,4 +168,3 @@ class ConGenerator:
             raise NotImplementedError
 
         return out
-

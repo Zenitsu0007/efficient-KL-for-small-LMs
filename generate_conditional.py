@@ -46,7 +46,7 @@ def parse_args():
         args.batch_size = 20
 
     # Set input filename
-    args.orig_filename = f"gen_data/{args.con_domain}.orig.part_0{args.part_idx}.shuf.jsonl"
+    args.orig_filename = f"gen_data/{args.con_domain}.orig.part_0{args.part_idx}.shuf.filtered.jsonl"
 
     # Check if `orig_filename` is shuffled, and if not, create a shuffled version.
     orig_dir, orig_filename = os.path.split(args.orig_filename)
