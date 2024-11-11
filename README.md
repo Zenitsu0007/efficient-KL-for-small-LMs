@@ -1,10 +1,10 @@
 # Impossible-Distillation
 
-This repository is the official code repository for our paper **Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing**.
+This repository is a replication project of the paper **Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing**.
 
 # Setup
 
-First install miniconda3 on Great Lakes.
+First install miniconda3.
 
 ```bash
 mkdir -p ~/miniconda3
