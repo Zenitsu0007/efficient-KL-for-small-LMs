@@ -29,6 +29,7 @@ def parse_args():
 
     # Arguments for saving
     parser.add_argument("--save_size", type=int, default=10)
+    parser.add_argument("--part_idx", type=int, help="Index from 0 to 5")
 
     args = parser.parse_args()
 
@@ -45,7 +46,7 @@ def parse_args():
         args.batch_size = 20
 
     # Set input filename
-    args.orig_filename = f"gen_data/{args.con_domain}.orig.jsonl"
+    args.orig_filename = f"gen_data/{args.con_domain}.orig.part_0{args.part_idx}.shuf.jsonl"
 
     # Check if `orig_filename` is shuffled, and if not, create a shuffled version.
     orig_dir, orig_filename = os.path.split(args.orig_filename)
