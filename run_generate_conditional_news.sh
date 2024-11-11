@@ -3,15 +3,15 @@
 
 # Lines beginning with #SBATCH specify your computing resources and other logistics about how to run your job.
 
-#SBATCH --job-name=news_generation_conditional_0
+#SBATCH --job-name=news_generation_conditional_part_0_0_to_1500
 #SBATCH --account=eecs498s006f24_class
 #SBATCH --partition=spgpu
 #SBATCH --time=08:00:00
 #SBATCH --nodes=1
 #SBATCH --gpus=a40:1
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=48g
-#SBATCH --output=news_generation_conditional_0.log
+#SBATCH --mem=30g
+#SBATCH --output=news_generation_conditional_part_0_0_to_1500.log
 
 # Load Python and any other desired modules
 source ~/miniconda3/etc/profile.d/conda.sh
