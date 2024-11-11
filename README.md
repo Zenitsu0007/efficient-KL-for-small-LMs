@@ -28,5 +28,13 @@ python -m spacy download en_core_web_sm
 # Run Generation
 
 ```bash
-sbatch run_generation_news.sh
+sbatch run_generate_conditional_news.sh
 ```
+
+When generating conditional, process one chunk of shards at a time by modifying the `--shard_start` and `--shard_size` arguments.
+
+Example:
+
+- Instance 1: --shard_start 0 --shard_size 5000
+- Instance 2: --shard_start 5000 --shard_size 5000
+- Instance 3: --shard_start 10000 --shard_size 5000
