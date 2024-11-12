@@ -3,7 +3,7 @@
 
 # Lines beginning with #SBATCH specify your computing resources and other logistics about how to run your job.
 
-#SBATCH --job-name=news_generation_conditional_part_0_0_to_1500
+#SBATCH --job-name=news_generation_conditional_part_1_3600_to_4800
 #SBATCH --account=eecs498s006f24_class
 #SBATCH --partition=spgpu
 #SBATCH --time=08:00:00
@@ -11,7 +11,7 @@
 #SBATCH --gpus=a40:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=30g
-#SBATCH --output=news_generation_conditional_part_0_0_to_1500.log
+#SBATCH --output=news_generation_conditional_part_1_3600_to_4800.log
 
 # Load Python and any other desired modules
 source ~/miniconda3/etc/profile.d/conda.sh
@@ -22,4 +22,4 @@ conda activate impossible-distillation
 nvidia-smi
 
 # Specify the script you want to run
-python generate_conditional.py --part_idx 0 --con_stage 0 --con_domain news --con_model_name gpt2-xl --device_id 0 --shard_size 1500 --shard_start 0 --save_size 10
+python generate_conditional.py --part_idx 1 --con_stage 0 --con_domain news --con_model_name gpt2-xl --device_id 0 --shard_size 1200 --shard_start 3600 --save_size 10
