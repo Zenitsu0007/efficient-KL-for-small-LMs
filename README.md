@@ -22,5 +22,5 @@
 # Run
 
 ```bash
-python T5/T5finetuned.py
+python T5/T5_finetune.py
 ```
