@@ -110,3 +110,5 @@ new/data/**/*.jsonl
 .vscode/
 .idea/
 __MACOSX/
+
+gen_data/stage0/gpt2-xl/part_0_unconcatenated
