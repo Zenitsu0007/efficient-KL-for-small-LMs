@@ -10,7 +10,7 @@ import jsonlines
 import torch
 from tqdm import tqdm
 
-from pipeline.con import ConGenerator
+from pipeline.connn import ConGenerator
 from pipeline.filter import ConFilter
 
 
