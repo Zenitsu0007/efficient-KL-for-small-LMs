@@ -2,7 +2,7 @@
 
 This repository is a replication project of the paper **Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing**.
 
-# Setup
+## Setup
 
 First install miniconda3.
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-# Run Generation
+## Run Generation
 
 ```bash
 sbatch run_generate_conditional_news.sh
@@ -40,3 +40,30 @@ Example:
 - Instance 3: --shard_start 3000 --shard_size 1500
 
 Set the `--part_idx` argument to the index of the chunk (0 to 5).
+
+## LoRA Setup
+
+```bash
+!pip install pytorch_lightning
+!pip install transformers
+!pip install datasets
+!pip install nltk
+!pip install rouge_score
+```
+
+## Download datasets
+
+```bash
+!mkdir data
+!wget https://storage.googleapis.com/paws/english/paws_wiki_labeled_final.tar.gz -P data
+!tar -xvf data/paws_wiki_labeled_final.tar.gz -C data
+!mv data/final/* data
+!rm -r data/final
+!rm -r data/paws_wiki_labeled_final.tar.gz
+```
+
+## Run
+
+```bash
+python T5/T5_finetune.py
+```
