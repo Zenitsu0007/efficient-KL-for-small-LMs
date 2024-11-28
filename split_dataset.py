@@ -3,7 +3,21 @@ import json
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-path = "D:\\SunYihao\\eecs498\\impossible-distillation-rep\\gen_data"
+
+
+def assign_tag(df):
+    # roughl_threshold = 0.7
+    nli_threshold = 0.9
+    reverse_nli_threshold = 0.9
+    if df['nli'] >= nli_threshold and df['reverse_nli'] >= reverse_nli_threshold:
+        return 1
+    elif df['nli'] < nli_threshold or df['reverse_nli'] < reverse_nli_threshold:
+        return 0
+    # elif df['rougeL'] < roughl_threshold:
+    #     return 0
+
+
+path = "D:\\SunYihao\\eecs498\\impossible-distillation-rep\\gen_data\\stage0\\gpt2-xl"
 
 jsonl_files = [f for f in os.listdir(path) if f.endswith('.jsonl')]
 
@@ -24,8 +38,13 @@ combined_df = pd.concat(dataframes, ignore_index=True)
 
 # Shuffle the data to ensure randomness
 combined_df = combined_df.sample(frac=1, random_state=42).reset_index(drop=True)
+combined_df['tag'] = combined_df.apply(assign_tag, axis=1)
 
-# Split the data into train (5/7), dev (1/7), and test (1/7)
+cnt_1 = (combined_df['tag'] == 1).sum()
+cnt_0 = (combined_df['tag'] == 0).sum()
+
+print(cnt_1, "\t", cnt_0, "\t", cnt_1/cnt_0)
+
 train_ratio = 5 / 7
 dev_test_ratio = 1 / 7
 
