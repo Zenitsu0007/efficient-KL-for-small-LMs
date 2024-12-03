@@ -1,8 +1,8 @@
-# Impossible-Distillation
+# Efficient Knowledge Distillation for Small Language Models
 
-This repository is a replication project of the paper **Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing**.
+This repository is a replication project of the paper **Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing**, with the addition of data evaluation pipeline and integration with Low-Rank Adaptation (LoRA) into the fine-tuning process. 
 
-## Setup
+## Data Evaluation Setup
 
 First install miniconda3.
 
